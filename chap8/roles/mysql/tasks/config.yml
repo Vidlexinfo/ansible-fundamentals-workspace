@@ -11,7 +11,7 @@
   register: mysqlpass
 
 - name: set fact for mysql default password
-  set_fact: MYSQL_DEFAULT_PASS="{{ mysqlpass.stdout_lines[0] }}"
+  set_fact: MYSQL_DEFAULT_PASS="{{ mysqlpass.stdout_lines[1] }}"
 
 
 - name: copy file to reset mysql pass
